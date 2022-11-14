@@ -3,7 +3,7 @@ def vector_compare(vector1,vector2):
     return vector
 
 
-P = {1:{}, 2:{}, 3:{}} # Inititalized an empty dictionary having 3 process
+P = {1:{}, 2:{}} # Inititalized an empty dictionary having 2 process
 
 inc = 0
 
@@ -17,12 +17,6 @@ n2 = int(input("Enter the no. of events in Process 2 : "))
 e2 = [i for i in range(1, n2 + 1)]
 P[2] = {key: [0, inc + key, 0] for key in e2}
 print(P[2])
-print("\n")
-
-n3 = int(input("Enter the no. of events in Process 3 : "))
-e3 = [i for i in range(1, n3 + 1)]
-P[3] = {key: [0, 0, inc + key] for key in e3}
-print(P[3])
 print("\n")
 
 comm = int(input("Enter the no of communication lines : "))
@@ -47,7 +41,6 @@ while inc < comm:
         print ("Enter the sent/recv within existing process")
     inc += 1
 
-print("Final vectors of the 3 process are")
+print("Final vectors of the 2 processes are")
 print(P[1])
 print(P[2])
-print(P[3])
